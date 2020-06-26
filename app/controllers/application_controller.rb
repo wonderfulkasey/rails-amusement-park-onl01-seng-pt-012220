@@ -3,13 +3,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  private 
+  private
 
   def verified_user
     redirect_to root_path unless user_is_authenticated
   end
 
-  def user_is_authenticated 
+  def user_is_authenticated
     !!current_user
   end
 
