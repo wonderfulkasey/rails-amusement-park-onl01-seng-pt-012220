@@ -1,8 +1,8 @@
 class AttractionsController < ApplicationController
-    before_action :verified_user 
+    before_action :verified_user
 
     def index
-        @attraction = Attraction.all 
+        @attraction = Attraction.all
     end
 
     def show
@@ -11,7 +11,7 @@ class AttractionsController < ApplicationController
     end
 
     def new
-        @attraction = Attraction.new 
+        @attraction = Attraction.new
     end
 
     def create
@@ -33,7 +33,7 @@ class AttractionsController < ApplicationController
 
     def attraction_params
         params.require(:attraction).permit(
-            :name, 
+            :name,
             :min_height,
             :happines_rating,
             :nausea_rating,
